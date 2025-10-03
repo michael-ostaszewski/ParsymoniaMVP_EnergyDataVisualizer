@@ -11,8 +11,10 @@ st.header("RTPE — rodziny instrumentów (M/Q/Y/W) z osią czasu z kodu kontrak
 
 
 # DEFAULT_RTPE_CSV = "/Users/michal/Downloads/RTPE_Contracts_abr_sample_CSV.csv"
-
-DEFAULT_RTPE_CSV = "https://raw.githubusercontent.com/michael-ostaszewski/ParsymoniaMVP_EnergyDataVisualizer/refs/heads/main/RTPE_Contracts_abr_sample_CSV.csv"
+DEFAULT_RTPE_CSV = (
+    "https://raw.githubusercontent.com/michael-ostaszewski/ParsymoniaMVP_EnergyDataVisualizer/"
+    "main/RTPE_Contracts_abr_sample_CSV.csv"
+)
 
 # DATA_PATH = Path(__file__).parent / "RTPE_Contracts_abr_sample_CSV.csv"
 # df = pd.read_csv(DATA_PATH, sep=";", dtype=str, encoding="utf-8", engine="python")
@@ -127,7 +129,7 @@ def _with_period_columns(df: pd.DataFrame) -> pd.DataFrame:
 st.caption("Domyślnie użyjemy: `/Users/michal/Downloads/RTPE_Contracts_abr_sample_CSV.csv`. Możesz też wgrać inny plik CSV.")
 upl_csv = st.file_uploader("Wgraj plik CSV (opcjonalnie)", type=["csv"], key="rtpe_csv_uploader_family")
 
-file_source = upl_csv if upl_csv is not None else (DEFAULT_RTPE_CSV if Path(DEFAULT_RTPE_CSV).exists() else None)
+file_source = upl_csv if upl_csv is not None else DEFAULT_RTPE_CSV
 if file_source is None:
     st.warning("Nie znaleziono domyślnego pliku i nic nie wgrano.")
 else:
