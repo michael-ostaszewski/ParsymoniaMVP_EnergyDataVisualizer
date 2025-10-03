@@ -1,0 +1,6 @@
+streamlit==1.36.0
+pandas==2.2.2
+numpy==1.26.4
+plotly==5.22.0
+openai>=1.35.10,<2
+openpyxl==3.1.5  # (opcjonalnie; przyda się, jeśli znów użyjesz read_excel)
