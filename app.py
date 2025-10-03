@@ -10,7 +10,9 @@ st.markdown("<hr>", unsafe_allow_html=True)
 st.header("RTPE — rodziny instrumentów (M/Q/Y/W) z osią czasu z kodu kontraktu")
 
 
-DEFAULT_RTPE_CSV = "/Users/michal/Downloads/RTPE_Contracts_abr_sample_CSV.csv"
+# DEFAULT_RTPE_CSV = "/Users/michal/Downloads/RTPE_Contracts_abr_sample_CSV.csv"
+
+DEFAULT_RTPE_CSV = "https://raw.githubusercontent.com/michael-ostaszewski/ParsymoniaMVP_EnergyDataVisualizer/refs/heads/main/RTPE_Contracts_abr_sample_CSV.csv"
 
 # DATA_PATH = Path(__file__).parent / "RTPE_Contracts_abr_sample_CSV.csv"
 # df = pd.read_csv(DATA_PATH, sep=";", dtype=str, encoding="utf-8", engine="python")
